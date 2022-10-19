@@ -16,24 +16,11 @@
           <h2>Recent scores</h2>
           <button class="btn-refresh" type="button">Refresh</button>
         </div>
-        <div class="results">
-          <div class="result">
-            <span class="name">Linus Torvalds: </span>
-            <span class="score">100</span>
-          </div>
-          <div class="result">
-            <span class="name">James Clear: </span>
-            <span class="score">125</span>
-          </div>
-          <div class="result">
-            <span class="name">Bill Gates: </span>
-            <span class="score">130</span>
-          </div>
-        </div>
+        <div class="results"></div>
       </section>
       <aside>
         <h2>Add your score</h2>
-        <form action="#">
+        <form id="data-submit">
           <label for="name"></label>
           <input
             class="your-name"
@@ -41,7 +28,8 @@
             id="name"
             name="name"
             placeholder="Your name"
-          /><br /><br />
+            maxlength="18"
+          />
           <label for="score"></label>
           <input
             class="your-score"
@@ -49,10 +37,25 @@
             id="score"
             name="score"
             placeholder="Your score"
-          /><br /><br />
-          <input class="btn-submit" type="submit" value="Submit" />
+            maxlength="999"
+          />
+          <button
+            class="btn-submit"
+            type="submit"
+            value="Submit"
+            title="Submit"
+          >
+            Submit
+          </button>
         </form>
       </aside>
     </main>
+    <footer>
+      <p>
+        Copyright<sup>&reg;</sup>
+        <a class="author" href="https://github.com/MYaserKhan">Yasir Khan</a>,
+        2022 All rights reserved
+      </p>
+    </footer>
   </body>
 </html>
